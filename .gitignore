@@ -1,0 +1,71 @@
+# ===============================
+# Java / Maven
+# ===============================
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# ===============================
+# IDEs
+# ===============================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# ===============================
+# OS / System files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Logs & reports
+# ===============================
+*.log
+surefire-reports/
+test-output/
+
+# ===============================
+# Selenium / WebDriver
+# ===============================
+*.exe
+drivers/
+downloads/
+
+# ===============================
+# Environment / secrets
+# ===============================
+.env
+*.properties
+!src/test/resources/*.properties
+
+# ===============================
+# Temporary / backup files
+# ===============================
+*.tmp
+*.bak
+*.swp
+*~
+
+# ===============================
+# Allure / other test reports (if added later)
+# ===============================
+allure-results/
+allure-report/

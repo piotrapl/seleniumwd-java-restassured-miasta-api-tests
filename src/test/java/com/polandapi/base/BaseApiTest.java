@@ -13,6 +13,11 @@ public abstract class BaseApiTest {
     protected static final String BASE_URL = "https://local-gov-units.polandapi.com";
     protected RequestSpecification req;
 
+/* Metoda setup() oznaczona adnotacją @BeforeClass, - wykonywana raz, przed wszystkimi testami w klasie. 
+    Ustawia bazowy URI dla RestAssured oraz tworzy specyfikację requestu, 
+    która będzie używana we wszystkich testach. 
+    Specyfikacja ta ustawia nagłówki Accept i Content-Type na JSON, co jest typowe dla API, które zwracają dane w formacie JSON.
+ */
     @BeforeClass
     public void setup() {
         RestAssured.baseURI = BASE_URL;
