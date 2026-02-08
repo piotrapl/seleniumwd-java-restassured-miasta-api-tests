@@ -19,7 +19,9 @@ public abstract class BaseApiTest {
     Specyfikacja ta ustawia nagłówki Accept i Content-Type na JSON, co jest typowe dla API, które zwracają dane w formacie JSON.
  */
     @BeforeClass
-    public void setup() {
+    public void setup()
+        RestAssured.useRelaxedHTTPSValidation();
+
         RestAssured.baseURI = BASE_URL;
         req = new RequestSpecBuilder()
                 .setAccept(ContentType.JSON)
@@ -52,7 +54,7 @@ public abstract class BaseApiTest {
         Assert.assertTrue(!dataString.isEmpty() && !dataString.equals("[]") && !dataString.equals("{}"),
                 "'data' should be non-empty");
     }
-    
+
 // Jeśli "data" jest obiektem lub innym typem, konwertujemy go na string i sprawdzamy, czy nie jest pusty.
 // !dataString.isEmpty() - sprawdza, czy "dataString" nie jest pustym stringiem.
 // !dataString.equals("[]") - sprawdza, czy "dataString" nie jest pustą listą.
