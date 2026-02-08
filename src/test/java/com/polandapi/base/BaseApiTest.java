@@ -19,7 +19,7 @@ public abstract class BaseApiTest {
     Specyfikacja ta ustawia nagłówki Accept i Content-Type na JSON, co jest typowe dla API, które zwracają dane w formacie JSON.
  */
     @BeforeClass
-    public void setup()
+    public void setup() {
         RestAssured.useRelaxedHTTPSValidation();
 
         RestAssured.baseURI = BASE_URL;
