@@ -45,7 +45,7 @@ public abstract class BaseApiTest {
         Assert.assertEquals(success, Boolean.TRUE, "'success' should be true");
 
         // Asercja #2: element "data" istnieje i nie jest pusty
-        //      w jeje ramach są wykonywane 2 metody z klasy Assert - assertNotNull() i assertTrue()
+        //      w jej ramach są wykonywane 2 metody z klasy Assert - assertNotNull() i assertTrue()
 
         Object data = res.jsonPath().get("data");
         Assert.assertNotNull(data, "'data' should exist");
