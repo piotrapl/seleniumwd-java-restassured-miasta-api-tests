@@ -38,18 +38,24 @@ public abstract class BaseApiTest {
     }
 
     protected void assertSuccessTrueAndDataNotEmpty(Response res) {
-        // Assertion #1: "success" == true
+        // Asercja #1: "success" == true
         Boolean success = res.jsonPath().getBoolean("success");
         Assert.assertEquals(success, Boolean.TRUE, "'success' should be true");
 
-        // Assertion #2: "data" exists and is non-empty
+        // Asercja #2: element "data" istnieje i nie jest pusty
+        //      w jeje ramach są wykonywane 2 metody z klasy Assert - assertNotNull() i assertTrue()
+
         Object data = res.jsonPath().get("data");
         Assert.assertNotNull(data, "'data' should exist");
 
-        // Works for array/object/string-ish responses:
-        // If data is a list, size() > 0; otherwise ensure not empty in string form.
         String dataString = String.valueOf(data).trim();
         Assert.assertTrue(!dataString.isEmpty() && !dataString.equals("[]") && !dataString.equals("{}"),
                 "'data' should be non-empty");
     }
+    
+// Jeśli "data" jest obiektem lub innym typem, konwertujemy go na string i sprawdzamy, czy nie jest pusty.
+// !dataString.isEmpty() - sprawdza, czy "dataString" nie jest pustym stringiem.
+// !dataString.equals("[]") - sprawdza, czy "dataString" nie jest pustą listą.
+// !dataString.equals("{}") - sprawdza, czy "dataString" nie jest pustym obiektem.
+
 }
