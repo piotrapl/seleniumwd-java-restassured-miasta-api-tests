@@ -27,7 +27,7 @@ Zależność **Selenium WebDriver** jest obecna w projekcie zgodnie z wymaganym 
 Dla każdej odpowiedzi:
 1. Pole **`success` ma wartość `true`**
 2. Pole **`data` istnieje i jest niepuste**
-3. (Dodatkowo) **HTTP 200**
+3. (Dodatkowo) response ma status **HTTP 200**
 
 Test jest uruchamiany wielokrotnie z różnymi danymi dzięki `@DataProvider`.
 
