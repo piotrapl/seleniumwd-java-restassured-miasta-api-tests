@@ -20,9 +20,8 @@ Zależność **Selenium WebDriver** jest obecna w projekcie zgodnie z wymaganym 
 
 ## Zakres projektu i scenariusze testowe
 
-### Testowane endpointy (pozytywne)
-- `GET /api/v1/municipalities/name/Lodz`
-- `GET /api/v1/municipalities/name/Lublin`
+### Testowany endpoint (przypadki pozytywne)
+- `GET /api/v1/municipalities/name/{name}`
 
 ### Wykonywane asercje
 Dla każdej odpowiedzi:
@@ -41,12 +40,13 @@ Test jest uruchamiany wielokrotnie z różnymi danymi dzięki `@DataProvider`.
 - Dostęp do internetu i API  
   `https://local-gov-units.polandapi.com`
 
-Uruchomienie testów:
+## Uruchomienie testów:
 ```bash
 mvn clean test
+```
 Uwaga: w przypadku problemów z certyfikatem HTTPS (SSLHandshake / PKIX) możliwe jest tymczasowe uruchomienie testów z wyłączoną walidacją SSL na środowisku testowym.
 
-Struktura projektu
+### Struktura projektu
 ```bash
 src/test/java/com/polandapi
 ├─ base
@@ -61,7 +61,7 @@ src/test/java/com/polandapi
 └─ .gitignore
 ```
 
-Architektura zakłada:
+### Taka architektura zakłada:
 
 jedno miejsce konfiguracji requestów,
 
@@ -69,7 +69,7 @@ jedno miejsce logiki asercji,
 
 minimalny kod w klasach testowych.
 
-Możliwe rozszerzenia
+## Możliwe rozszerzenia
 testy negatywne (nieistniejące nazwy, puste wartości),
 
 wczytywanie danych testowych z CSV / JSON,
@@ -80,7 +80,7 @@ raportowanie (np. Allure),
 
 obsługa wielu środowisk (dev / stage).
 
-RestAssured vs alternatywy (krótko)
+## RestAssured vs alternatywy (krótko)
 RestAssured
 
 bardzo czytelna składnia, szybkie pisanie testów
