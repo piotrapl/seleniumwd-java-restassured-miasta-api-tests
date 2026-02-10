@@ -1,7 +1,7 @@
 ## seleniumwd-java-restassured-miasta-api-tests
 
 **EN (short abstract)**  
-A lightweight, data-driven API test project for `local-gov-units.polandapi.com`.  
+A lightweight, data-driven API test project for `https://local-gov-units.polandapi.com`.  
 Built with Java, TestNG and RestAssured, following DRY principles.
 
 ---
