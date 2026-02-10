@@ -80,14 +80,16 @@ raportowanie (np. Allure),
 
 obsługa wielu środowisk (dev / stage).
 
-## RestAssured vs alternatywy (krótko)
-RestAssured
+## RestAssured vs alternatywy
+### RestAssured
 
 bardzo czytelna składnia, szybkie pisanie testów
 
 świetna integracja z TestNG i CI
 − przy większych projektach wymaga dobrej struktury (klienci, modele)
 
-Alternatywy: Apache HttpClient, OkHttp, Spring WebTestClient, Karate DSL
-Każde ma swoje zalety, jednak RestAssured oferuje najlepszy kompromis prostoty i możliwości dla klasycznych testów API w Javie.
+### Alternatywy: 
+Apache HttpClient, OkHttp, Spring WebTestClient, Karate DSL
+
+Inne rozwiazania mają swoje zalety, jednak RestAssured oferuje najlepszy kompromis prostoty i możliwości dla klasycznych testów API w Javie.
 
