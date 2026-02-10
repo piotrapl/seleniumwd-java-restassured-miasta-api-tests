@@ -47,16 +47,20 @@ mvn clean test
 Uwaga: w przypadku problemów z certyfikatem HTTPS (SSLHandshake / PKIX) możliwe jest tymczasowe uruchomienie testów z wyłączoną walidacją SSL na środowisku testowym.
 
 Struktura projektu
-'''bash
-Skopiuj kod
+```bash
 src/test/java/com/polandapi
 ├─ base
 │  └─ BaseApiTest.java        # konfiguracja RestAssured + wspólne asercje
 ├─ data
 │  └─ MunicipalitiesData.java # dane testowe (DataProvider)
 └─ tests
-   └─ MunicipalitiesByNameTest.java
-'''
+│ └─ MunicipalitiesByNameTest.java
+├─ pom.xml
+├─ testng.xml
+├─ README.md
+└─ .gitignore
+```
+
 Architektura zakłada:
 
 jedno miejsce konfiguracji requestów,
