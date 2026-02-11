@@ -1,6 +1,6 @@
 ## seleniumwd-java-restassured-miasta-api-tests
 
-![CI](https://github.com/piotrapl/seleniumwd-java-restassured-miasta-api-tests/actions/workflows/ci.yml/badge.svg)
+#![CI](https://github.com/piotrapl/seleniumwd-java-restassured-miasta-api-tests/actions/workflows/ci.yml/badge.svg)
 
 **EN (short abstract)**  
 A lightweight, data-driven API test project for `https://local-gov-units.polandapi.com`.  
